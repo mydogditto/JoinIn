@@ -1,6 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-
+('webpack-bundle-analyzer');
 module.exports = {
   entry: path.join(__dirname, "client", "src", "index.jsx"),
   output: {
@@ -28,11 +28,13 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".jsx", ".js"],
+    extensions: [".js", ".jsx"],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "client", "src", "index.html"), // template file
+      template: path.join(__dirname, "client", "src", "index.html"),
     }),
+
   ],
+
 };
